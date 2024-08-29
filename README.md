@@ -13,10 +13,9 @@ For the development of my project, I employed a combination of advanced web tech
 - **Responsive Design:** Implemented a responsive layout with adaptive adjustments for various devices, including mobile-first design and tablet adaptation.
 - **Rem Conversion:** Ensured consistent scaling across different screen sizes by converting units to rem.
 
-**JavaScript and React:**
+**JavaScript and Vue:**
 
-- **React:** Utilized for building dynamic user interfaces.
-- **useState and useEffect:** Employed for managing component state and handling side effects effectively.
+- **Vue:** Utilized for building dynamic user interfaces.
 
 **Libraries and Tools:**
 
@@ -29,7 +28,7 @@ These technologies and practices collectively contribute to creating a well-stru
 
 Click the button below to experience the Brighterly:
 
-[DEMO](https://brighterly.netlify.app)
+[DEMO](https://brighterly-vue.netlify.app)
 
 [Design Original Version](https://www.figma.com/design/vihydlAanczhrhrCpYcMcv/Test-Task-_-Front-End-Developer?node-id=0-1&t=UBWClI58VH96IRqq-1)
 ## Run Locally
@@ -37,13 +36,13 @@ Click the button below to experience the Brighterly:
 Clone the project
 
 ```bash
-  git clone https://github.com/julwer1k/brighterly.git
+  git clone https://github.com/julwer1k/brighterly-vue.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd brighterly
+  cd brighterly-vue
 ```
 
 Install dependencies
