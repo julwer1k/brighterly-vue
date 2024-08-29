@@ -1,0 +1,33 @@
+$fontFamily: "Montserrat";
+$fontSize: toRem(14); // where 14 (px) is the default font size from the layout
+
+// Main colors
+$mainColor: #0d2a54;
+$yellowColor: #f90;
+$redColor: #ef4444;
+$greenColor: #06a66c;
+$lightGreenColor: #3ee838;
+
+// Minimum page width
+$minWidth: 320;
+// Width of the canvas (layout)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1224;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 16;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: toEm(767.98); // Телефони L
+$mobileSmall: toEm(479.98); // Телефони S
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;

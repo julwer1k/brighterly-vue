@@ -1,0 +1,28 @@
+.header {
+	padding-top: toRem(8);
+	margin-bottom: toRem(24);
+
+	@media (min-width: $mobile) {
+		padding-top: toRem(32);
+		margin-bottom: toRem(68);
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@media (min-width: $mobile) {
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+	}
+
+	&__link {
+		transition: transform 0.3s ease;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

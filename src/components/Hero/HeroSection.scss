@@ -1,0 +1,153 @@
+
+.hero {
+	margin-bottom: toRem(40);
+
+	@media (min-width: $tablet) {
+		margin-bottom: 0;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		font-weight: 800;
+		font-style: normal;
+
+		@media (min-width: $tablet) {
+			gap: toRem(15);
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+
+	&__text-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(8);
+
+		@media (min-width: $tablet) {
+			align-items: flex-start;
+			gap: toRem(16);
+		}
+	}
+
+	&__title {
+		@extend %title;
+
+		@media (min-width: $tablet) {
+			max-width: toRem(702);
+			text-align: left;
+			font-size: toRem(48);
+			line-height: 1.33333; /* 64px */
+		}
+	}
+
+	&__info {
+		display: inline-flex;
+		padding: toRem(4) toRem(8);
+		align-items: flex-start;
+		gap: toRem(8);
+		border-radius: toRem(4);
+		background: #d0dbf1;
+
+		color: $mainColor;
+
+		line-height: 1.71429; /* 24px */
+
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__text {
+		color: $mainColor;
+		font-feature-settings: "liga" off, "clig" off;
+		line-height: 1.42857; /* 20px */
+
+		& > span {
+			color: $lightGreenColor;
+
+			line-height: inherit;
+		}
+
+		@media (min-width: $mobileSmall) {
+			max-width: toRem(600);
+			text-align: center;
+		}
+
+		@media (min-width: $tablet) {
+			text-align: left;
+			font-size: toRem(20);
+			line-height: 1.4; /* 28px */
+
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__list {
+		font-weight: 400;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(12);
+		color: $mainColor;
+		margin-bottom: toRem(14);
+
+		@media (min-width: $mobile) {
+			margin-bottom: toRem(24);
+		}
+	}
+
+	&__item {
+		font-size: toRem(12);
+		font-weight: 600;
+		line-height: 1.33333; /* 16px */
+
+		& > img {
+			width: toRem(16);
+			height: toRem(16);
+			margin-right: toRem(8);
+
+			@media (min-width: $mobile) {
+				width: toRem(24);
+				height: toRem(24);
+			}
+		}
+
+		@media (min-width: $mobile) {
+			font-size: toRem(16);
+			line-height: 1.5; /* 24px */
+		}
+	}
+
+	&__button {
+		margin-bottom: toRem(16);
+	}
+
+	&__image-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(8);
+		background: #fff;
+
+		@media (min-width: $tablet) {
+			background: transparent;
+		}
+	}
+
+	&__image {
+		width: toRem(128);
+		height: toRem(135);
+
+		@media (min-width: $mobile) {
+			width: toRem(300);
+			height: toRem(300);
+		}
+
+		@media (min-width: $tablet) {
+			width: toRem(496);
+			height: toRem(527);
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.button {
+	display: inline-flex;
+	padding: toRem(16) toRem(32);
+	justify-content: center;
+	align-items: center;
+	gap: toRem(8);
+
+	border-radius: toRem(4);
+	background: $redColor;
+
+	color: #fff;
+	text-align: center;
+	font-feature-settings: "liga" off, "clig" off;
+
+	font-size: toRem(16);
+	font-weight: 800;
+	line-height: 1.5; /* 24px */
+
+	&:hover {
+		background: #dc2626;
+}
+
+	&:active {
+		background: #f87171;
+}
+
+	&:disabled {
+		background: #d0dbf1;
+		cursor: not-allowed;
+}
+}

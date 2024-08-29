@@ -1,0 +1,134 @@
+.about {
+	padding-top: toRem(80);
+	margin-bottom: toRem(80);
+
+	@media (min-width: $tablet) {
+		margin-bottom: toRem(120);
+	}
+
+
+	[class*=about__container] {
+		max-width: toRem(1034);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: $tablet) {
+			flex-direction: row;
+			gap: toRem(24);
+		}
+	}
+
+	&__text-сontent {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(8);
+		margin-bottom: toRem(24);
+
+		@media (min-width: $tablet) {
+			max-width: 41.4rem;
+			word-wrap: break-word;
+			margin-bottom: toRem(16);
+		}
+	}
+
+	&__title {
+		color: $mainColor;
+		font-weight: 800;
+		line-height: 1.42857; /* 20px */
+
+		@media (min-width: $tablet) {
+			font-size: toRem(32);
+			line-height: 1.5; /* 48px */
+		}
+	}
+
+	&__text {
+		color: $mainColor;
+
+		font-size: toRem(12);
+		font-weight: 600;
+		line-height: 1.33333; /* 16px */
+
+		@media (min-width: $tablet) {
+			font-size: toRem(16);
+			line-height: 1.5; /* 24px */
+		}
+	}
+
+	&__text:not(:last-child) {
+		margin-bottom: toRem(8);
+
+		@media (min-width: $tablet) {
+			margin-bottom: toRem(24)
+		}
+	}
+
+	&__aside {
+		display: inline-flex;
+		height: max-content;
+		flex-direction: column;
+		align-items: stretch;
+		gap: toRem(16);
+		padding: toRem(16);
+		border-radius: toRem(8);
+		border: 1px solid #d0dbf1;
+		background: #faf8f6;
+
+		box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.02), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	}
+
+	&__aside-title {
+		@extend %title;
+	}
+
+	&__aside-image {
+		margin: 0 auto;
+		max-width: toRem(272);
+		max-height: toRem(146);
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(16);
+
+	&__field {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(8);
+		border-radius: toRem(8);
+		border: 1px solid #d0dbf1;
+		background: #fff;
+
+		padding: toRem(12) toRem(12) toRem(12) toRem(16);
+	}
+
+	&__field-title {
+		color: $mainColor;
+
+		font-size: toRem(12);
+		font-weight: 500;
+		line-height: 1.33333; /* 16px */
+	}
+
+	&__field-input {
+		color: $mainColor;
+
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 1.5; /* 24px */
+
+		outline: none;
+		background: transparent;
+		border: none;
+
+		&::placeholder {
+			color: #273a57ff;
+		}
+	}
+}

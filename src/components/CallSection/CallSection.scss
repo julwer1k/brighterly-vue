@@ -1,0 +1,38 @@
+.call {
+	padding-top: toRem(24);
+	padding-bottom: toRem(32);
+	background: #fff;
+
+	@media (min-width: $tablet) {
+		padding-top: toRem(64);
+		padding-bottom: toRem(68);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(16);
+		align-items: center;
+		font-weight: 800;
+		line-height: 1.42857; /* 20px */
+
+		@media (min-width: $tablet) {
+			gap: toRem(32);
+			margin: 0 auto;
+			align-items: flex-start;
+			max-width: toRem(600);
+
+			font-size: toRem(24);
+			line-height: 1.66667; /* 40px */
+		}
+	}
+
+	&__text {
+		color: $mainColor;
+		text-align: center;
+
+		& > span {
+			color: $lightGreenColor;
+		}
+	}
+}

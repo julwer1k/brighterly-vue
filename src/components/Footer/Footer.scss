@@ -1,0 +1,110 @@
+.footer {
+	padding-top: toRem(40);
+	border: 1px solid #2B41B7;
+	background: #2B41B7;
+
+	@media (min-width: $tablet) {
+		padding-top: toRem(35);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(24);
+
+		@media (min-width: $tablet) {
+		}
+	}
+
+	&__group-image {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media (min-width: $mobileSmall) {
+			justify-content: space-between;
+		}
+
+		@media (min-width: $mobile) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__info {
+		width: 100%;
+		order: -1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(40);
+
+		@media (min-width: toEm(768)) {
+			align-self: flex-start;
+			order: 0;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		color: #fff;
+		font-size: toRem(16);
+		font-weight: 800;
+		line-height: 1.5; /* 24 */
+
+		@media (min-width: $mobileSmall) {
+			font-size: toRem(22);
+		}
+
+		@media (min-width: $mobile) {
+			font-size: toRem(24);
+		}
+
+		@media (min-width: $tablet) {
+			font-size: toRem(32);
+		}
+
+		@include adaptiveValue("max-width", 670, 280, 0, 768, 320);
+	}
+
+	&__button {
+		margin: 0 auto toRem(24);
+		width: max-content;
+		transition: background linear 0.3s;
+
+		@media (min-width: $tablet) {
+			background: $lightGreenColor;
+		}
+	}
+
+	&__image {
+		object-fit: cover;
+		&-first {
+			height: toRem(202);
+			width: 50%;
+
+			@include adaptiveValue("width", 227, 150, 0, 768, 320);
+			@include adaptiveValue("height", 300, 202, 0, 768, 320);
+
+			@media (min-width: toEm(768)) {
+				height: toRem(300);
+			}
+		}
+
+		&-second {
+			margin-left: toRem(-5);
+			height: toRem(239);
+			width: 50%;
+
+			@include adaptiveValue("width", 227, 150, 0, 768, 320);
+			@include adaptiveValue("height", 300, 239, 0, 768, 320);
+
+			@media (min-width: toEm(768)) {
+				margin-left: 0;
+				height: toRem(328);
+			}
+		}
+	}
+}

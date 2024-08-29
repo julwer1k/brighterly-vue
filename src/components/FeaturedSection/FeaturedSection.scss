@@ -1,0 +1,64 @@
+@mixin partnerStyles($partner, $widthSmall, $widthLarge, $heightSmall, $heightLarge) {
+	.featured__partner#{$partner} {
+		@include adaptiveValue('width', $widthLarge, $widthSmall, 0, 1440, 320);
+		@include adaptiveValue('height', $heightLarge, $heightSmall, 0, 1440, 320);
+	}
+}
+
+.featured {
+	padding-top: toRem(24);
+	padding-bottom: toRem(40);
+	background: #fff;
+
+	@media (min-width: $tablet) {
+		padding-top: toRem(56);
+		padding-bottom: toRem(63);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(27);
+
+		@media (min-width: $tablet) {
+			gap: toRem(31);
+		}
+	}
+
+	&__title {
+		color: $mainColor;
+		text-align: center;
+
+		font-size: toRem(16);
+		font-weight: 800;
+		line-height: 1.5;
+
+		@media (min-width: $tablet) {
+			font-size: toRem(48);
+			font-weight: 700;
+			line-height: 1.33333;
+		}
+	}
+
+	&__partners {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(16) toRem(24);
+
+		@media (min-width: $tablet) {
+			gap: toRem(48);
+		}
+
+		@include partnerStyles('AP', 34, 55, 40, 64);
+		@include partnerStyles('MW', 122, 196, 17, 28);
+		@include partnerStyles('MI', 82, 110, 27, 36);
+		@include partnerStyles('YF', 73, 111, 26, 40);
+		@include partnerStyles('HomeSchool', 77, 139, 37, 70);
+	}
+
+	&__link {
+		@include hover(transform, scale(1.1));
+	}
+}

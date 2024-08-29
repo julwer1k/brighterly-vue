@@ -1,0 +1,47 @@
+.feedback {
+	padding: toRem(80) 0;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: toRem(16);
+	}
+
+	&__title {
+		color: $mainColor;
+		text-align: center;
+
+		font-size: toRem(16);
+		font-weight: 800;
+		line-height: 1.5; /* 24px */
+
+		@media (min-width: $mobile) {
+			max-width: toRem(600);
+			font-size: toRem(48);
+			line-height: 1.33333; /* 64px */
+			margin-bottom: toRem(40);
+		}
+	}
+
+	&__cards {
+		display: none;
+
+		@media (min-width: $mobile) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: toRem(24);
+			column-count: 3;
+		}
+	}
+
+	&__card {
+		cursor: pointer;
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		vertical-align: middle;
+
+		@include hover(transform, scale(1.05));
+	}
+}
